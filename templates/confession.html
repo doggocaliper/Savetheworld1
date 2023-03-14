@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" type="image/x-icon" href="https://3.imimg.com/data3/BU/QV/GLADMIN-55251/ambulance-light-500x500.jpg">
+    <title>Safe Space</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+  <center>
+    <button onclick="window.location.href='https://sosxasrjc.peekachu.repl.co/';">
+      Return to Homepage
+    </button>
+    <h1>Safe Space</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Lourdes_sign_for_confession.jpg" width="200" height="100">
+    <h2>Share anything you want. If you are a bully and would like to come clean, you can make a post. 
+      <br>
+      If you are a student and want to share anything, you can also make a post. This is an anonymous page unless you choose to reveal yourself.
+    <br>
+    <hr>
+    <form action="/confession.html" method="post">
+    <label for="confession">Enter your confession:</label>
+    <input type="text" name="confession" id="confession">
+    <br>
+    <br>
+    <input type="submit" onclick="alert('Thank you for your confession, it has been added to the database and will soon be reviewed by the moderator.')" value="Submit">
+    </form>
+  </h2>
+    
+  </body>
+</html>
+
+  </center>
+  </body>
+</html>
