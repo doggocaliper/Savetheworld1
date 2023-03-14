@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" type="image/x-icon" href="https://3.imimg.com/data3/BU/QV/GLADMIN-55251/ambulance-light-500x500.jpg">
+    <title>Song Recs</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+  <center>
+    <button onclick="window.location.href='https://sosxasrjc.peekachu.repl.co/';">
+      Return to Homepage
+    </button>
+    <h1>For Stress Relief</h1>
+    <img src="https://www.wellbeingpeople.com/app/uploads/2019/04/Man-relaxing-in-field-700x467.jpg" width="200" height="100">
+    <br>
+    <h2>The previous pages before this one has been pretty stressful. Hence, this page is for people to find ways to relax, which may be listening to music for some.</h2>
+    <hr>
+    <h3>Song Corner</h3>
+    <form>
+      <input type="button" value="Generate Random Song (mostly lofi songs btw)" onClick="generate()"/>
+    </form>
+    <div id="finalsong"></div>
+    <script>
+      function generate() {
+        var album_covers = ["https://i1.sndcdn.com/artworks-000341414088-f74p52-t500x500.jpg", "https://upload.wikimedia.org/wikipedia/en/a/ad/Wavejobim.jpg", "https://upload.wikimedia.org/wikipedia/en/e/e6/Le_Sserafim_-_Antifragile.png", "https://f4.bcbits.com/img/a3469066655_10.jpg", "https://f4.bcbits.com/img/a1388804279_10.jpg", "https://upload.wikimedia.org/wikipedia/en/c/c9/Hann_%28Alone%29_Single_Cover.jpg", "https://lastfm.freetls.fastly.net/i/u/ar0/064a0275ec329d528cbf7f4afc57310b.jpg", "https://i.scdn.co/image/ab67616d0000b2735fd3ee33ef83dc69b9b71781", "https://i.scdn.co/image/ab67616d0000b273af5ef3132243711c92caca87", "https://i.scdn.co/image/ab67616d0000b27346108c072c8e3db5e9ca9838", "https://preview.redd.it/fifty-fifty-the-1st-single-album-the-beginning-cupid-cover-v0-ujxvn57yg5ka1.jpg?auto=webp&s=464bef37a60cd8b6b2d0c607ecea65be3c4e85b8", "https://upload.wikimedia.org/wikipedia/en/a/a3/Nmixx_-_Entwurf.png", "https://i.scdn.co/image/ab67616d0000b2738e5d432c31d64fbb6a371fc2", "https://i.scdn.co/image/ab67616d0000b27372712ceb19427c4eec556624", "https://i.scdn.co/image/ab67616d0000b273d0b8d6c9bf1874f13c9c0154", "https://i1.sndcdn.com/artworks-000196743536-97ge46-t500x500.jpg", "https://i.scdn.co/image/ab67616d0000b2730a313a5fb83a11c119819ef3", "https://cdns-images.dzcdn.net/images/cover/278788ca19533d6e07087247df000a6d/264x264.jpg", "https://s3.amazonaws.com/media.thecrimson.com/photos/2022/03/21/194820_1355058.png", "https://upload.wikimedia.org/wikipedia/en/1/1d/IU%2C_Good_Day_%28JPN_Version%3B_CD_Cover%29.png", "https://i.scdn.co/image/ab67616d0000b2738ea860a3e6904b875629d672", "https://thewildcattribune.com/wp-content/uploads/2019/12/03052530458dc3060cd37811fb230400.1000x1000x1.jpg", "https://i0.wp.com/arambulolive.com/wp-content/uploads/2022/07/Untitled_Artwork-11-1.jpg?resize=720%2C720&ssl=1"]
+        var songs = ["It's Raining", "Wave", "Impurities", "Summer's Day", "Metamodernity", "HANN (ALONE)", "Drive to 1980 Love", "Titanium / Pavane", "Rear View", "Rising", "Cupid", "COOL (YOUR RAINBOW)", "Takin' a Stroll Together", "Caught In The Rain", "let's be lazy together", "Chill Day", "Ladyfingers", "Beauty In The Mundane", "Feel My Rhythm", "Good Day", "247", "Hot Rod", "Somebody!"];
+        var singers = ["Masked Man, potsu", "Antonio Carlos Jobim", "LE SSERAFIM", "Jinsang", "Vansire", "(G)I-DLE", "JANE POP", "The Piano Guys", "LANKS", "tripleS", "FIFTY FIFTY", "NMIXX", "Essential Jazz Masters", "Aso", "Biosphere", "LAKEY INSPIRED", "Herb Alpert", "Bird Of Figment", "Red Velvet", "IU", "STAYC", "Dayglow", "Loco, Hwa Sa"];
+        var links = ["https://youtu.be/qr52cXXr-6s", "https://youtu.be/a6KDpB6skA4", "https://youtu.be/Ccz123Jlflc", "https://youtu.be/rRr-DZmYER0", "https://youtu.be/LHsVtH0CS7I", "https://youtu.be/WI9YfDvNqlQ", "https://youtu.be/7mVN_QYhjhg", "https://youtu.be/fz4MzJTeL0c", "https://youtu.be/EC-5_BjO8pY", "https://youtu.be/3TQd2ahq6oU", "https://youtu.be/Qc7_zRjH808", "https://youtu.be/gf9r7rnrlDw", "https://youtu.be/vjzmXVzytEg", "https://youtu.be/XgJJ1L2fti8", "https://youtu.be/SyahnX3VRb8", "https://youtu.be/3HjG1Y4QpVA", "https://youtu.be/l6U1JB7z-I8", "https://youtu.be/Pu5CdIGwSDk", "https://youtu.be/hpMkQ7vXmRw", "https://youtu.be/9X5Kcr8hXmI", "https://youtu.be/gzuquPJ7ieE", "https://youtu.be/tsJXoqvmgzM", "https://youtu.be/D24Cfa7t4cI"]
+
+        var index_of_song = Math.floor(Math.random() * songs.length);
+
+        var song1 = {
+          album: album_covers[index_of_song],
+          song: songs[index_of_song],
+          singer: singers[index_of_song],
+          link: links[index_of_song]
+        };
+
+        var finalsong = document.getElementById("finalsong");
+        finalsong.innerHTML = '<p><img src="' + song1.album + '" height = 200 width = 200' + "<h3><p>" + song1.song + "</h3><p>By: " + song1.singer + '</h3><p><a href="' + song1.link + '">Click here to enjoy the song</a>';
+      }
+    </script>
+  </center>
+  </body>
+</html>
