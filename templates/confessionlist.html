@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+  font-family: 'Sans Comic Sans', sans-serif;
+}
+</style>
+  <head>
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="icon" type="image/x-icon" href="https://3.imimg.com/data3/BU/QV/GLADMIN-55251/ambulance-light-500x500.jpg">
+    <title>Confession List</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+<body>
+<center>
+  <button onclick="window.location.href='https://sosxasrjc.peekachu.repl.co/';">
+      Return to Homepage
+    </button>
+  <h1><font color="FF6F1D">Confessions</font></h1>
+  <a href="https://youtu.be/P0hOTR509NQ">
+  <img src="https://i.pinimg.com/564x/12/80/88/12808821e980b751b988fa9f0a160348.jpg" alt="shocked-penguin" width="200" height="100"></a>
+  <h2><font color="00008B">Let's hope that this page/site can save the world.</font></h2>
+  <hr>
+  <ul>
+    {% for confession in confessions %}
+      <li>{{ confession }}</li>
+    {% endfor %}
+  </ul>
+<br>
+<br>
+</body>
+</center>
+</html>
