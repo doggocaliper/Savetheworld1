@@ -22,7 +22,6 @@ def confess():
 #      return redirect(url_for('confess', confession = confession))
     return render_template('confession.html')
 
-
 @app.route("/whatnext.html")
 def whatnext():
   return render_template('whatnext.html')
@@ -30,6 +29,12 @@ def whatnext():
 @app.route("/reportabully.html")
 def reportabully():
   return render_template('reportabully.html')
+
+@app.route('/confessionlist.html')
+def confessions():
+    with open('data.txt', 'r') as file:
+        confessions = file.readlines()
+    return render_template('confessionlist.html', confessions=confessions)
 
 # @app.route("/<name>")
 # def user(name):
