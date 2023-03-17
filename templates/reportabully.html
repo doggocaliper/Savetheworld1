@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
+  <style>
+body {
+  font-family: 'Sans Comic Sans', sans-serif;
+}
+  </style>
   <head>
+    <meta name="viewport" content="initial-scale=1, width=device-width">
     <link rel="icon" type="image/x-icon" href="https://3.imimg.com/data3/BU/QV/GLADMIN-55251/ambulance-light-500x500.jpg">
     <title>Report Station</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
@@ -10,10 +16,10 @@
     <button onclick="window.location.href='https://sosxasrjc.peekachu.repl.co/';">
       Return to Homepage
     </button>
-    <h1>Report a Bully</h1>
+    <h1><font color="FF6F1D">Report a Bully</font></h1>
       <a href="https://youtu.be/1SVIpDMk7fk">
     <img src="https://www.skillcast.com/hubfs/whistleblower_1200x627.jpg" alt="you are whistleblower" width="200" height="100"></a>
-    <h2>Regardless of whether you are the victim or a bystander, you can help to make ASRJC a safer place by reporting the tormentor(s). With everyone's help, school can be a secure place for all of us. To contribute, please complete the questions below. The reports would be reviewed within 3 working days.</h2>
+    <h2><font color="00008B">Regardless of whether you are the victim or a bystander, you can help to make ASRJC a safer place by reporting the tormentor(s). With everyone's help, school can be a secure place for all of us. To contribute, please complete the questions below. The reports would be reviewed within 3 working days.</font></h2>
       <hr>
       <form>
       <h3>
@@ -35,7 +41,7 @@
 
       <label for="description">Please describe how the bully looks like:</label>
       <br>
-      <textarea id="description" name="description" rows="4" cols="50">
+      <textarea id="description" name="description" rows="4" cols="40">
 </textarea>
       <br>
       <br>
@@ -60,12 +66,14 @@
       <label for="assault3">Digital</label><br>
       <br>
       <label for="detail">Enter in detail what the bully did:</label><br>
-      <textarea id="detail" name="detail" rows="4" cols="50">
+      <textarea id="detail" name="detail" rows="4" cols="40">
 </textarea>
       <br>
       <a href="https://youtu.be/ynTuA_tlZDE">submit</a>
       </h3>
       </form>
+      <br>
+      <br>
     </center>
   </body>
 </html>
