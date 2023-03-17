@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
+  <style>
+body {
+  font-family: 'Sans Comic Sans', sans-serif;
+}
+  </style>
   <head>
+    <meta name="viewport" content="initial-scale=1, width=device-width">
     <link rel="icon" type="image/x-icon" href="https://3.imimg.com/data3/BU/QV/GLADMIN-55251/ambulance-light-500x500.jpg">
     <title>Safe Space</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
@@ -10,22 +16,28 @@
     <button onclick="window.location.href='https://sosxasrjc.peekachu.repl.co/';">
       Return to Homepage
     </button>
-    <h1>Safe Space</h1>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Lourdes_sign_for_confession.jpg" width="200" height="100">
-    <h2>Share anything you want. If you are a bully and would like to come clean, you can make a post. 
+    <h1><font color="FF6F1D">Safe Space</font></h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Lourdes_sign_for_confession.jpg" alt="confession goes here ->" width="200" height="100">
+    <h2><font color="00008B">Share anything you want. If you are a bully and would like to come clean, you can make a post. 
       <br>
       If you are a student and want to share anything, you can also make a post. This is an anonymous page unless you choose to reveal yourself.
     <br>
-    <hr>
+    </font><hr>
     <form action="/confession.html" method="post">
     <label for="confession">Enter your confession:</label>
-    <input type="text" name="confession" id="confession">
     <br>
     <br>
-    <input type="submit" onclick="alert('Thank you for your confession, it has been added to the database and will soon be reviewed by the moderator.')" value="Submit">
+    <textarea id="confession" name="confession" rows="4" cols="40"></textarea>
+    <br>
+    <input type="submit" onclick="alert('Thank you for your confession, it has been added to the database and will soon be reviewed by everyone.')" value="Submit">
     </form>
   </h2>
-    
+  <h2>! Confession(s) !</h2>
+  <a href="./confessionlist.html">Click here to view</a>
+  <br>
+  <br>
+  <br>
+  <br>
   </body>
 </html>
 
