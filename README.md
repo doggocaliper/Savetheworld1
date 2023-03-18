@@ -1,7 +1,7 @@
 # Savetheworld1
 
-i don't even know if i got do correctly or not
+Description: Web app that allows students to seek help by reporting bullies. The web app lets students make confessions and find friends.
 
-replit link: https://replit.com/@peekachu/sosxasrjc
+Replit link: https://replit.com/@peekachu/sosxasrjc
 
-website link: https://sosxasrjc.peekachu.repl.co/
+Website link: https://sosxasrjc.peekachu.repl.co/
