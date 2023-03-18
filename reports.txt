@@ -1,0 +1,4 @@
+Name of reportee: John Doe 
+Name of bully: Mary Doe 
+Description of bully: 1.60m, wears the school uniform. 
+Detail of assault: The bully kicked me in the groin multiple times, and then ran away. 
