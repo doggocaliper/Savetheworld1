@@ -13,7 +13,7 @@ body {
   </head>
   <body>
     <center>
-    <button onclick="window.location.href='https://sosxasrjc.peekachu.repl.co/';">
+    <button class="button" onclick="window.location.href='https://sosxasrjc.peekachu.repl.co/';">
       Return to Homepage
     </button>
     <h1><font color="FF6F1D">Report a Bully</font></h1>
@@ -21,7 +21,7 @@ body {
     <img src="https://www.skillcast.com/hubfs/whistleblower_1200x627.jpg" alt="you are whistleblower" width="200" height="100"></a>
     <h2><font color="00008B">Regardless of whether you are the victim or a bystander, you can help to make ASRJC a safer place by reporting the tormentor(s). With everyone's help, school can be a secure place for all of us. To contribute, please complete the questions below. The reports would be reviewed within 3 working days.</font></h2>
       <hr>
-      <form>
+      <form action="/reportabully.html" method="post">
       <h3>
       <label for="name">What is your name:</label>
       <input type="text" id="name" name="name"><br>
@@ -36,7 +36,7 @@ body {
       
       <label for="name1">What is the name of the bully (if you don't know just put 'don't know'):</label>
       <br>
-      <input type="text" id="name1" name1="name1"><br>
+      <input type="text" id="name1" name="name1"><br>
       <br>
 
       <label for="description">Please describe how the bully looks like:</label>
@@ -69,7 +69,8 @@ body {
       <textarea id="detail" name="detail" rows="4" cols="40">
 </textarea>
       <br>
-      <a href="https://youtu.be/ynTuA_tlZDE">submit</a>
+      <br>
+      <input type="submit" class="button1" onclick="alert('Thank you for your submission, it has been added to the database and will soon be reviewed by school. In the meantime, do not worry because the school is there for you. 🤪.')" value="Submit">
       </h3>
       </form>
       <br>
