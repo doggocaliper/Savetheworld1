@@ -26,9 +26,17 @@ def confess():
 def whatnext():
   return render_template('whatnext.html')
 
-@app.route("/reportabully.html")
+@app.route("/reportabully.html", methods=['POST', 'GET'])
 def reportabully():
-  return render_template('reportabully.html')
+    if request.method == 'POST':
+        name = str(request.form.get('name'))
+        name1 = str(request.form.get('name1'))
+        description = str(request.form.get('description'))
+        detail = str(request.form.get('detail'))
+        with open('reports.txt', 'a') as file:
+          file.write('Name of reportee: ' + name + ' \nName of bully: ' + name1 + ' \nDescription of bully: ' + description + ' \nDetail of assault: ' + detail + ' \n')
+        return redirect(url_for('reportabully', name = name, name1 = name1, description = description, detail = detail))
+    return render_template('reportabully.html')
 
 @app.route('/confessionlist.html')
 def confessions():
